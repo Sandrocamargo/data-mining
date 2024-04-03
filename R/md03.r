@@ -70,6 +70,9 @@ for (i in 1:4){
 
 # Measuring the Shape
 # Skewness
+# skewness > 0 in positive skewed distributions
+# skewness = 0.0... in symmetrical distributions
+# skewness < 0 in negative skewed distributions
 for (i in 1:4){
   plot(density(data[,i]), main=paste(colnames(data)[i], "- Skewness:",round(skewness(data[,i]),3),", Kurtosis:",round(kurtosis(data[,i]),3)))
   abline(v=mean(data[,i]), col="green")
