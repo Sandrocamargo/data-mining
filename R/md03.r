@@ -109,3 +109,9 @@ plot(data$SepalLength,data$SepalWidth, main="Scatterplot", xlab="Sepal Length (c
 #pdf("scatterplot-petal.pdf")
 plot(data$PetalLength,data$PetalWidth, main="Scatterplot", xlab="Petal Length (cm)", ylab="Petal Width (cm)")
 #dev.off()
+
+pairs(data[,1:4], col=as.factor(data$Species))
+
+library(corrplot)
+corrplot(cor(data[-5]), addCoef.col = "black",  )
+
